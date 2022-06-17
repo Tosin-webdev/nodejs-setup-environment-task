@@ -41,7 +41,7 @@ const server = http.createServer((req, res) => {
 
   if (req.url === '/home') {
     res.writeHead(302, {
-      Location: '/', // This is your url which you want
+      Location: '/',
     });
     res.end();
   }
@@ -50,17 +50,3 @@ const server = http.createServer((req, res) => {
 server.listen(5000, () => {
   console.log('Server is listening on port 5000');
 });
-
-//   res.write('index.html');
-
-// if(req.url === '/'){
-//   res.writeHead(200, {"Content-Type": "text/html"});
-//   res.write('welcome to my portfolio website');
-//     // res.send("hello")
-// }
-// if(req.url === '/about'){
-//     res.end('About page')
-// }
-// if(req.url === '/contact'){
-//     res.end('contact page')
-// }
